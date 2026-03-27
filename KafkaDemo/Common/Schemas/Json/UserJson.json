@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org",
+  "title": "UserJson",
+  "type": "object",
+  "required": [ "ID", "Name", "Age" ],
+  "properties": {
+    "ID": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Age": {
+      "type": "integer"
+    }
+  }
+}

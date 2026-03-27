@@ -1,0 +1,20 @@
+{ 
+  "namespace": "Common.Schemas.Avro",
+  "type": "record",
+  "doc": "A type as used to represent user information.",
+  "name": "UserAvro",
+  "fields": [
+    {
+      "name": "ID",
+      "type": "string"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Age",
+      "type": "int"
+    }
+  ]
+}

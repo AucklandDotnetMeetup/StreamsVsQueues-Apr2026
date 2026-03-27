@@ -1,0 +1,25 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.1.2">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>59edec80-3e57-4df2-adb0-779d5b89f874</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AJP.Aspire.Hosting.AsbEmulatorUi" Version="1.0.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Emulator\Emulator.csproj" />
+    <ProjectReference Include="..\Producers\Producers.csproj" />
+    <ProjectReference Include="..\ReceiverReplica1\ReceiverReplica1.csproj" />
+    <ProjectReference Include="..\ReceiverReplica2UseProcessor\ReceiverReplica2UseProcessor.csproj" />
+    <ProjectReference Include="..\ScheduleReceiver\ScheduleReceiver.csproj" />
+    <ProjectReference Include="..\SessionReceiverReplica1\SessionReceiverReplica1.csproj" />
+    <ProjectReference Include="..\SessionReceiverReplica2UseProcessor\SessionReceiverReplica2UseProcessor.csproj" />
+  </ItemGroup>
+
+</Project>
