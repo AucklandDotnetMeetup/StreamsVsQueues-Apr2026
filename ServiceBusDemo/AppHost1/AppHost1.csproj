@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Emulator\Emulator.csproj" />
     <ProjectReference Include="..\Producers\Producers.csproj" />
+    <ProjectReference Include="..\ReceiverForDeadLetterQueue\ReceiverForDeadLetterQueue.csproj" />
     <ProjectReference Include="..\ReceiverReplica1\ReceiverReplica1.csproj" />
     <ProjectReference Include="..\ReceiverReplica2UseProcessor\ReceiverReplica2UseProcessor.csproj" />
     <ProjectReference Include="..\ScheduleReceiver\ScheduleReceiver.csproj" />

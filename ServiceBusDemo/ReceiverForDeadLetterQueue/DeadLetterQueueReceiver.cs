@@ -19,7 +19,9 @@ internal static class DeadLetterQueueReceiver
         {
             while (true)
             {
-                IReadOnlyList<ServiceBusReceivedMessage> receivedMessages = await receiver.ReceiveMessagesAsync(maxMessages: 2);
+                IReadOnlyList<ServiceBusReceivedMessage> receivedMessages = await receiver.PeekMessagesAsync(
+                    maxMessages: 2
+                );
 
                 if (receivedMessages.Count == 0) continue;
 
@@ -28,7 +30,6 @@ internal static class DeadLetterQueueReceiver
                     string body = message.Body.ToString();
                     Console.WriteLine($"{Helpers.GetCurrentTime()} Message ID:{message.MessageId} --- Reason: {message.DeadLetterReason} --- {body}");
                     await Task.Delay(200);
-                    await receiver.CompleteMessageAsync(message);
                 }
             }
         }

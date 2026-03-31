@@ -10,7 +10,7 @@
     "Name": {
       "type": "string"
     },
-    "Age": {
+    "Length": {
       "type": "integer"
     }
   }

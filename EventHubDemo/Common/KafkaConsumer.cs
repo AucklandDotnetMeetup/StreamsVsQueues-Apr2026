@@ -19,7 +19,7 @@ public class KafkaConsumer
         consumerConfig.SaslMechanism = SaslMechanism.Plain;
         consumerConfig.SaslUsername = "$ConnectionString";
         consumerConfig.SaslPassword = ConnectionStrings.EventHubNamespaceConnectionString;
-        consumerConfig.GroupId = "$Default";
+        consumerConfig.GroupId = ConnectionStrings.ConsumerGroup;
         consumerConfig.EnableAutoCommit = false;
         consumerConfig.AutoOffsetReset = AutoOffsetReset.Earliest;
         consumer = new ConsumerBuilder<string, string>(consumerConfig).Build();
@@ -27,8 +27,8 @@ public class KafkaConsumer
 
     public void Start(CancellationToken cancellationToken)
     {
-        Console.WriteLine($"Start receiving messages from evnehub {ConnectionStrings.EventHubNameForKafka} consumer group $Default ......");
-        consumer.Subscribe(ConnectionStrings.EventHubNameForKafka);
+        Console.WriteLine($"Start receiving messages from evnehub {ConnectionStrings.EventHubName2} consumer group {ConnectionStrings.ConsumerGroup} ......");
+        consumer.Subscribe(ConnectionStrings.EventHubName2);
         while (!cancellationToken.IsCancellationRequested)
         {
             try

@@ -1,5 +1,6 @@
 using Azure.Messaging.EventHubs.Producer;
 using Common;
+using Producers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton(new EventHubProducerClient(ConnectionStrings.EventHubNamespaceConnectionString, ConnectionStrings.EventHubName));
+builder.Services.AddSingleton<EventHubProducersFactory>();
 builder.Services.AddSingleton<KafkaProducer>();
 
 var app = builder.Build();

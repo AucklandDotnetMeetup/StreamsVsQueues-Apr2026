@@ -104,7 +104,7 @@ public class ProducerController : ControllerBase
 
         var messageKey = Guid.NewGuid().ToString();
         var messageValue = new UserJson();
-        messageValue.Age = fixture.Create<int>();
+        messageValue.Length = fixture.Create<int>();
         messageValue.ID = fixture.Create<string>();
         messageValue.Name = fixture.Create<string>();
 

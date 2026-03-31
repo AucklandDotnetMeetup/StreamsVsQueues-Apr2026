@@ -49,7 +49,7 @@ public class ProducerController : ControllerBase
     }
 
     [HttpPost("session")]
-    public async Task<IActionResult> CreateBySession([FromBody] ProducerRequest producerRequest)
+    public async Task<IActionResult> CreateBySession([FromBody] SessionProducerRequest producerRequest)
     {
         var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);
         var sessionCount = Helpers.GetValueFromMinToMax(producerRequest.Sessions, 1, 10);

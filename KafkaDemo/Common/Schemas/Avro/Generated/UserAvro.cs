@@ -21,10 +21,10 @@ namespace Common.Schemas.Avro
 	{
 		public static global::Avro.Schema _SCHEMA = global::Avro.Schema.Parse("{\"type\":\"record\",\"name\":\"UserAvro\",\"doc\":\"A type as used to represent user inform" +
 				"ation.\",\"namespace\":\"Common.Schemas.Avro\",\"fields\":[{\"name\":\"ID\",\"type\":\"string\"" +
-				"},{\"name\":\"Name\",\"type\":\"string\"},{\"name\":\"Age\",\"type\":\"int\"}]}");
+				"},{\"name\":\"Name\",\"type\":\"string\"},{\"name\":\"Length\",\"type\":\"int\"}]}");
 		private string _ID;
 		private string _Name;
-		private int _Age;
+		private int _Length;
 		public virtual global::Avro.Schema Schema
 		{
 			get
@@ -54,15 +54,15 @@ namespace Common.Schemas.Avro
 				this._Name = value;
 			}
 		}
-		public int Age
+		public int Length
 		{
 			get
 			{
-				return this._Age;
+				return this._Length;
 			}
 			set
 			{
-				this._Age = value;
+				this._Length = value;
 			}
 		}
 		public virtual object Get(int fieldPos)
@@ -71,7 +71,7 @@ namespace Common.Schemas.Avro
 			{
 			case 0: return this.ID;
 			case 1: return this.Name;
-			case 2: return this.Age;
+			case 2: return this.Length;
 			default: throw new global::Avro.AvroRuntimeException("Bad index " + fieldPos + " in Get()");
 			};
 		}
@@ -81,7 +81,7 @@ namespace Common.Schemas.Avro
 			{
 			case 0: this.ID = (System.String)fieldValue; break;
 			case 1: this.Name = (System.String)fieldValue; break;
-			case 2: this.Age = (System.Int32)fieldValue; break;
+			case 2: this.Length = (System.Int32)fieldValue; break;
 			default: throw new global::Avro.AvroRuntimeException("Bad index " + fieldPos + " in Put()");
 			};
 		}

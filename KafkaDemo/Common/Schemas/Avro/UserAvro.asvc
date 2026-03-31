@@ -13,7 +13,7 @@
       "type": "string"
     },
     {
-      "name": "Age",
+      "name": "Length",
       "type": "int"
     }
   ]

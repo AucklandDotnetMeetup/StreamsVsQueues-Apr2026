@@ -1,11 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Azure.Messaging.EventHubs;
-using Azure.Messaging.EventHubs.Consumer;
 using Azure.Storage.Blobs;
 using Common;
 
-Console.WriteLine($"Start receiving messages from evnehub {ConnectionStrings.EventHubName} consumer group {EventHubConsumerClient.DefaultConsumerGroupName} ......");
+Console.WriteLine($"Start receiving messages from evnehub {ConnectionStrings.EventHubName1} consumer group {ConnectionStrings.ConsumerGroup} ......");
 
 var tcs = new TaskCompletionSource<bool>();
 var cts = new CancellationTokenSource();
@@ -21,11 +20,11 @@ Console.CancelKeyPress += (sender, eventArgs) =>
 await ProcessorHelpers.CreateCheckpointBlob();
 
 BlobContainerClient blobContainerClient = new BlobContainerClient(ConnectionStrings.BlobServiceConnectionString, ConnectionStrings.CheckpointBlobContainer);
-var options = new EventProcessorClientOptions 
+var options = new EventProcessorClientOptions
 {
     PrefetchCount = 10
 };
-var processor = new EventProcessorClient(blobContainerClient, EventHubConsumerClient.DefaultConsumerGroupName, ConnectionStrings.EventHubNamespaceConnectionString, ConnectionStrings.EventHubName, options);
+var processor = new EventProcessorClient(blobContainerClient, ConnectionStrings.ConsumerGroup, ConnectionStrings.EventHubNamespaceConnectionString, ConnectionStrings.EventHubName1, options);
 
 processor.ProcessEventAsync += ProcessorHelpers.ProcessEventHandler;
 processor.ProcessErrorAsync += ProcessorHelpers.ProcessErrorHandler;

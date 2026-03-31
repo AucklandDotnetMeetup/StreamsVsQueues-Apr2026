@@ -22,7 +22,7 @@ try
         foreach (ServiceBusReceivedMessage message in receivedMessages)
         {
             string body = message.Body.ToString();
-            Console.WriteLine($"{Helpers.GetCurrentTime()} Received: {body} --- Message ID:{message.MessageId}");
+            Console.WriteLine($"{Helpers.GetCurrentTime()} Received: {body} ---SequenceNumber:{message.SequenceNumber} --- Message ID:{message.MessageId}");
             await Task.Delay(200);
             await receiver.CompleteMessageAsync(message);
         }

@@ -2,9 +2,9 @@
 using Common;
 using System.Text;
 
-Console.WriteLine($"Start receiving messages from evnehub {ConnectionStrings.EventHubName} consumer group cg1 ......");
+Console.WriteLine($"Start receiving messages from evnehub {ConnectionStrings.EventHubName1} consumer group {EventHubConsumerClient.DefaultConsumerGroupName} ......");
 
-var consumer = new EventHubConsumerClient("cg1", ConnectionStrings.EventHubNamespaceConnectionString, ConnectionStrings.EventHubName);
+var consumer = new EventHubConsumerClient(EventHubConsumerClient.DefaultConsumerGroupName, ConnectionStrings.EventHubNamespaceConnectionString, ConnectionStrings.EventHubName1);
 
 try
 {

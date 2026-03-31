@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiverWithKafkaReplica2",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emulator", "Emulator\Emulator.csproj", "{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiverWithProcessorBatch", "ReceiverWithProcessorBatch\ReceiverWithProcessorBatch.csproj", "{B491EC29-8A4A-9187-E668-80B0BC8A0AA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75AE88F4-1100-2A0B-EFE4-DC6F9999D2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B491EC29-8A4A-9187-E668-80B0BC8A0AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B491EC29-8A4A-9187-E668-80B0BC8A0AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B491EC29-8A4A-9187-E668-80B0BC8A0AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B491EC29-8A4A-9187-E668-80B0BC8A0AA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

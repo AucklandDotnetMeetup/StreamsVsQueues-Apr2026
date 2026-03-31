@@ -10,7 +10,7 @@
             "PartitionCount": "1",
             "ConsumerGroups": [
               {
-                "Name": "cg1"
+                "Name": "cgtest"
               }
             ]
           },
@@ -19,7 +19,16 @@
             "PartitionCount": "1",
             "ConsumerGroups": [
               {
-                "Name": "cg2"
+                "Name": "cgtest"
+              }
+            ]
+          },
+          {
+            "Name": "eh3",
+            "PartitionCount": "2",
+            "ConsumerGroups": [
+              {
+                "Name": "cgtest"
               }
             ]
           }
