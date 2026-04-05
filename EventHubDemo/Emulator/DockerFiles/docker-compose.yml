@@ -1,3 +1,4 @@
+name: eventhubs-emulator
 services:
   emulator:
     container_name: "eventhubs-emulator"
