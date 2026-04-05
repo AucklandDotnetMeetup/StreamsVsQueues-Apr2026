@@ -9,5 +9,6 @@ builder.AddProject<Projects.ReceiverSendOffsetReplica1>("ReceiverSendOffsetRepli
 builder.AddProject<Projects.ReceiverSendOffsetReplica2>("ReceiverSendOffsetReplica2").WithExplicitStart(); ;
 builder.AddProject<Projects.ReceiverWithKafkaReplica1>("ReceiverWithKafkaReplica1").WithExplicitStart(); ;
 builder.AddProject<Projects.ReceiverWithKafkaReplica2>("ReceiverWithKafkaReplica2").WithExplicitStart(); ;
+builder.AddProject<Projects.ReceiverWithProcessorBatch>("ReceiverWithProcessorBatch").WithExplicitStart(); ;
 
 builder.Build().Run();

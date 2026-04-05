@@ -23,7 +23,7 @@ namespace Producers.Controllers
             _kafkaProducer = kafkaProducer;
         }
 
-        [HttpPost]
+        [HttpPost("basic")]
         public async Task<IActionResult> Create([FromBody] ProducerRequest producerRequest)
         {
             var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);
