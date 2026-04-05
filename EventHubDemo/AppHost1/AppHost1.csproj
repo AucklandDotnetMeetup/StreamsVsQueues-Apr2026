@@ -21,6 +21,7 @@
     <ProjectReference Include="..\ReceiverSendOffsetReplica2\ReceiverSendOffsetReplica2.csproj" />
     <ProjectReference Include="..\ReceiverWithKafkaReplica1\ReceiverWithKafkaReplica1.csproj" />
     <ProjectReference Include="..\ReceiverWithKafkaReplica2\ReceiverWithKafkaReplica2.csproj" />
+    <ProjectReference Include="..\ReceiverWithProcessorBatch\ReceiverWithProcessorBatch.csproj" />
   </ItemGroup>
 
 </Project>
