@@ -18,7 +18,7 @@ public class ProducerController : ControllerBase
         _serviceBusProducer = serviceBusProducer;
     }
 
-    [HttpPost("single")]
+    //[HttpPost("single")]
     public async Task<IActionResult> Create()
     {
         var message = new ServiceBusMessage($"ServiceBus Event xxx {DateTime.UtcNow}");
@@ -48,7 +48,7 @@ public class ProducerController : ControllerBase
         return Ok($"Sent {count} messages");
     }
 
-    [HttpPost("session")]
+    //[HttpPost("session")]
     public async Task<IActionResult> CreateBySession([FromBody] SessionProducerRequest producerRequest)
     {
         var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);
@@ -74,7 +74,7 @@ public class ProducerController : ControllerBase
         return Ok($"Sent {count} messages to {sessionCount} sessions");
     }
 
-    [HttpPost("schedule")]
+    //[HttpPost("schedule")]
     public async Task<IActionResult> CreateBySchedule([FromBody] ProducerRequest producerRequest)
     {
         var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);
@@ -91,7 +91,7 @@ public class ProducerController : ControllerBase
         return Ok($"Sent {count} messages");
     }
 
-    [HttpPost("dlq")]
+    //[HttpPost("dlq")]
     public async Task<IActionResult> CreateByDLQ([FromBody] ProducerRequest producerRequest)
     {
         var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);

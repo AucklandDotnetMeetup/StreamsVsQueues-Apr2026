@@ -66,7 +66,7 @@ public class ProducerController : ControllerBase
 
     #region avro schema
 
-    [HttpPost("AvroSchema")]
+    //[HttpPost("AvroSchema")]
     public async Task<IActionResult> CreateMessagesAvroSchema([FromBody] ProducerRequest producerRequest)
     {
         await RunTasks(producerRequest, ProduceMessageAvroSchema);
@@ -91,7 +91,7 @@ public class ProducerController : ControllerBase
 
     #region json schema
 
-    [HttpPost("JsonSchema")]
+    //[HttpPost("JsonSchema")]
     public async Task<IActionResult> CreateMessagesJsonSchema([FromBody] ProducerRequest producerRequest)
     {
         await RunTasks(producerRequest, ProduceMessageJsonSchema);
@@ -119,7 +119,7 @@ public class ProducerController : ControllerBase
 
     #region protobuf schema
 
-    [HttpPost("ProtobufSchema")]
+    //[HttpPost("ProtobufSchema")]
     public async Task<IActionResult> CreateMessagesProtobufSchema([FromBody] ProducerRequest producerRequest)
     {
         await RunTasks(producerRequest, ProduceMessageProtobufSchema);
@@ -144,7 +144,7 @@ public class ProducerController : ControllerBase
 
     #region share group
 
-    [HttpPost("ShareGroup")]
+    //[HttpPost("ShareGroup")]
     public async Task<IActionResult> CreateMessagesShareGroup([FromBody] ProducerRequest producerRequest)
     {
         await RunTasks(producerRequest, ProduceMessageShareGroup);

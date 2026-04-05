@@ -49,7 +49,7 @@ namespace Producers.Controllers
             return Ok($"Sent {count} messages");
         }
 
-        [HttpPost("bykafka")]
+        //[HttpPost("bykafka")]
         public async Task<IActionResult> CreateThroughKafka([FromBody] ProducerRequest producerRequest)
         { 
             var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);
@@ -66,7 +66,7 @@ namespace Producers.Controllers
             return Ok($"Sent {count} messages through Kafka");
         }
 
-        [HttpPost("multipartitions")]
+        //[HttpPost("multipartitions")]
         public async Task<IActionResult> CreateMultiplePartitions([FromBody] ProducerRequest producerRequest)
         {
             var count = Helpers.GetValueFromMinToMax(producerRequest.Count, 1, 100);
