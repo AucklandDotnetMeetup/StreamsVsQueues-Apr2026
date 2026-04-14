@@ -66,12 +66,12 @@ public class ProducerController : ControllerBase
 
     #region avro schema
 
-    //[HttpPost("AvroSchema")]
-    //public async Task<IActionResult> CreateMessagesAvroSchema([FromBody] ProducerRequest producerRequest)
-    //{
-    //    await RunTasks(producerRequest, ProduceMessageAvroSchema);
-    //    return Ok();
-    //}
+    [HttpPost("AvroSchema")]
+    public async Task<IActionResult> CreateMessagesAvroSchema([FromBody] ProducerRequest producerRequest)
+    {
+       await RunTasks(producerRequest, ProduceMessageAvroSchema);
+       return Ok();
+    }
 
     private async Task ProduceMessageAvroSchema()
     {
@@ -91,12 +91,12 @@ public class ProducerController : ControllerBase
 
     #region json schema
 
-    //[HttpPost("JsonSchema")]
-    //public async Task<IActionResult> CreateMessagesJsonSchema([FromBody] ProducerRequest producerRequest)
-    //{
-    //    await RunTasks(producerRequest, ProduceMessageJsonSchema);
-    //    return Ok();
-    //}
+    [HttpPost("JsonSchema")]
+    public async Task<IActionResult> CreateMessagesJsonSchema([FromBody] ProducerRequest producerRequest)
+    {
+       await RunTasks(producerRequest, ProduceMessageJsonSchema);
+       return Ok();
+    }
 
     private async Task ProduceMessageJsonSchema()
     {
@@ -119,12 +119,12 @@ public class ProducerController : ControllerBase
 
     #region protobuf schema
 
-    //[HttpPost("ProtobufSchema")]
-    //public async Task<IActionResult> CreateMessagesProtobufSchema([FromBody] ProducerRequest producerRequest)
-    //{
-    //    await RunTasks(producerRequest, ProduceMessageProtobufSchema);
-    //    return Ok();
-    //}
+    [HttpPost("ProtobufSchema")]
+    public async Task<IActionResult> CreateMessagesProtobufSchema([FromBody] ProducerRequest producerRequest)
+    {
+       await RunTasks(producerRequest, ProduceMessageProtobufSchema);
+       return Ok();
+    }
 
     private async Task ProduceMessageProtobufSchema()
     {
@@ -144,12 +144,12 @@ public class ProducerController : ControllerBase
 
     #region share group
 
-    //[HttpPost("ShareGroup")]
-    //public async Task<IActionResult> CreateMessagesShareGroup([FromBody] ProducerRequest producerRequest)
-    //{
-    //    await RunTasks(producerRequest, ProduceMessageShareGroup);
-    //    return Ok();
-    //}
+    [HttpPost("ShareGroup")]
+    public async Task<IActionResult> CreateMessagesShareGroup([FromBody] ProducerRequest producerRequest)
+    {
+       await RunTasks(producerRequest, ProduceMessageShareGroup);
+       return Ok();
+    }
 
     private async Task ProduceMessageShareGroup()
     {
